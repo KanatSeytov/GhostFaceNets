@@ -84,7 +84,7 @@ def main(args):
   image_shape = [int(x) for x in args.image_size.split(',')]
 
   for model_path in model.split('|'):
-    model = keras.models.load_model(model, compile=False)
+    model = keras.models.load_model(model_path, compile=False)
     # model = backbone.to(ctx)
     # model.eval()
     print(f"LOADED MODEL FROM {model_path}")
